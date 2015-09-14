@@ -1,0 +1,2 @@
+/home/chaixun/HexIII_Version2/Test_Vision/CMakeFiles/Client.dir
+/home/chaixun/HexIII_Version2/Test_Vision/CMakeFiles/Server.dir

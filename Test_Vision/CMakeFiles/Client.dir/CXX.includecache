@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/chaixun/HexIII_Version2/Test_Vision/Client/client.cpp
+Robot_Client.h
+-
+
+/usr/Robots/include/Robot_Client.h
+
