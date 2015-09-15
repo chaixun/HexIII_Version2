@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/chaixun/HexIII_Version2/Test_Vision_805/Server/Kinect_Test.h
+/home/hex/git_cx/Test_Vision_805/Server/Kinect_Test.h
 pcl/io/openni_grabber.h
 -
 pcl/visualization/cloud_viewer.h
@@ -16,15 +16,23 @@ pcl/io/pcd_io.h
 pcl/common/transforms.h
 -
 
-/home/chaixun/HexIII_Version2/Test_Vision_805/Server/VisionControl.h
+/home/hex/git_cx/Test_Vision_805/Server/VisionControl.h
 Kinect_Test.h
-/home/chaixun/HexIII_Version2/Test_Vision_805/Server/Kinect_Test.h
+/home/hex/git_cx/Test_Vision_805/Server/Kinect_Test.h
 
-/home/chaixun/HexIII_Version2/Test_Vision_805/Server/Vision_Gait.h
+/home/hex/git_cx/Test_Vision_805/Server/Vision_Gait.cpp
+Vision_Gait.h
+/home/hex/git_cx/Test_Vision_805/Server/Vision_Gait.h
+math.h
+-
+iostream
+-
+
+/home/hex/git_cx/Test_Vision_805/Server/Vision_Gait.h
 Robot_Gait.h
 -
 
-/home/chaixun/HexIII_Version2/Test_Vision_805/Server/main.cpp
+/home/hex/git_cx/Test_Vision_805/Server/main.cpp
 cstring
 -
 iomanip
@@ -56,11 +64,11 @@ Aris_Control.h
 Robot_Server.h
 -
 Kinect_Test.h
-/home/chaixun/HexIII_Version2/Test_Vision_805/Server/Kinect_Test.h
+/home/hex/git_cx/Test_Vision_805/Server/Kinect_Test.h
 VisionControl.h
-/home/chaixun/HexIII_Version2/Test_Vision_805/Server/VisionControl.h
+/home/hex/git_cx/Test_Vision_805/Server/VisionControl.h
 Vision_Gait.h
-/home/chaixun/HexIII_Version2/Test_Vision_805/Server/Vision_Gait.h
+/home/hex/git_cx/Test_Vision_805/Server/Vision_Gait.h
 
 /usr/Aris/include/Aris_Control.h
 thread

@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/chaixun/HexIII_Version2/Test_Vision_805
+CMAKE_SOURCE_DIR = /home/hex/git_cx/Test_Vision_805
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/chaixun/HexIII_Version2/Test_Vision_805
+CMAKE_BINARY_DIR = /home/hex/git_cx/Test_Vision_805
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Server.dir/depend.make
@@ -51,17 +51,17 @@ include CMakeFiles/Server.dir/flags.make
 
 CMakeFiles/Server.dir/Server/main.cpp.o: CMakeFiles/Server.dir/flags.make
 CMakeFiles/Server.dir/Server/main.cpp.o: Server/main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/chaixun/HexIII_Version2/Test_Vision_805/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hex/git_cx/Test_Vision_805/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Server.dir/Server/main.cpp.o"
-	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Server.dir/Server/main.cpp.o -c /home/chaixun/HexIII_Version2/Test_Vision_805/Server/main.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Server.dir/Server/main.cpp.o -c /home/hex/git_cx/Test_Vision_805/Server/main.cpp
 
 CMakeFiles/Server.dir/Server/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/Server/main.cpp.i"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/chaixun/HexIII_Version2/Test_Vision_805/Server/main.cpp > CMakeFiles/Server.dir/Server/main.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hex/git_cx/Test_Vision_805/Server/main.cpp > CMakeFiles/Server.dir/Server/main.cpp.i
 
 CMakeFiles/Server.dir/Server/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/Server/main.cpp.s"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/chaixun/HexIII_Version2/Test_Vision_805/Server/main.cpp -o CMakeFiles/Server.dir/Server/main.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hex/git_cx/Test_Vision_805/Server/main.cpp -o CMakeFiles/Server.dir/Server/main.cpp.s
 
 CMakeFiles/Server.dir/Server/main.cpp.o.requires:
 .PHONY : CMakeFiles/Server.dir/Server/main.cpp.o.requires
@@ -74,17 +74,17 @@ CMakeFiles/Server.dir/Server/main.cpp.o.provides.build: CMakeFiles/Server.dir/Se
 
 CMakeFiles/Server.dir/Server/Kinect_Test.cpp.o: CMakeFiles/Server.dir/flags.make
 CMakeFiles/Server.dir/Server/Kinect_Test.cpp.o: Server/Kinect_Test.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/chaixun/HexIII_Version2/Test_Vision_805/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hex/git_cx/Test_Vision_805/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Server.dir/Server/Kinect_Test.cpp.o"
-	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Server.dir/Server/Kinect_Test.cpp.o -c /home/chaixun/HexIII_Version2/Test_Vision_805/Server/Kinect_Test.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Server.dir/Server/Kinect_Test.cpp.o -c /home/hex/git_cx/Test_Vision_805/Server/Kinect_Test.cpp
 
 CMakeFiles/Server.dir/Server/Kinect_Test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/Server/Kinect_Test.cpp.i"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/chaixun/HexIII_Version2/Test_Vision_805/Server/Kinect_Test.cpp > CMakeFiles/Server.dir/Server/Kinect_Test.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hex/git_cx/Test_Vision_805/Server/Kinect_Test.cpp > CMakeFiles/Server.dir/Server/Kinect_Test.cpp.i
 
 CMakeFiles/Server.dir/Server/Kinect_Test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/Server/Kinect_Test.cpp.s"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/chaixun/HexIII_Version2/Test_Vision_805/Server/Kinect_Test.cpp -o CMakeFiles/Server.dir/Server/Kinect_Test.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hex/git_cx/Test_Vision_805/Server/Kinect_Test.cpp -o CMakeFiles/Server.dir/Server/Kinect_Test.cpp.s
 
 CMakeFiles/Server.dir/Server/Kinect_Test.cpp.o.requires:
 .PHONY : CMakeFiles/Server.dir/Server/Kinect_Test.cpp.o.requires
@@ -97,17 +97,17 @@ CMakeFiles/Server.dir/Server/Kinect_Test.cpp.o.provides.build: CMakeFiles/Server
 
 CMakeFiles/Server.dir/Server/VisionControl.cpp.o: CMakeFiles/Server.dir/flags.make
 CMakeFiles/Server.dir/Server/VisionControl.cpp.o: Server/VisionControl.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/chaixun/HexIII_Version2/Test_Vision_805/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hex/git_cx/Test_Vision_805/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Server.dir/Server/VisionControl.cpp.o"
-	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Server.dir/Server/VisionControl.cpp.o -c /home/chaixun/HexIII_Version2/Test_Vision_805/Server/VisionControl.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Server.dir/Server/VisionControl.cpp.o -c /home/hex/git_cx/Test_Vision_805/Server/VisionControl.cpp
 
 CMakeFiles/Server.dir/Server/VisionControl.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/Server/VisionControl.cpp.i"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/chaixun/HexIII_Version2/Test_Vision_805/Server/VisionControl.cpp > CMakeFiles/Server.dir/Server/VisionControl.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hex/git_cx/Test_Vision_805/Server/VisionControl.cpp > CMakeFiles/Server.dir/Server/VisionControl.cpp.i
 
 CMakeFiles/Server.dir/Server/VisionControl.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/Server/VisionControl.cpp.s"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/chaixun/HexIII_Version2/Test_Vision_805/Server/VisionControl.cpp -o CMakeFiles/Server.dir/Server/VisionControl.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hex/git_cx/Test_Vision_805/Server/VisionControl.cpp -o CMakeFiles/Server.dir/Server/VisionControl.cpp.s
 
 CMakeFiles/Server.dir/Server/VisionControl.cpp.o.requires:
 .PHONY : CMakeFiles/Server.dir/Server/VisionControl.cpp.o.requires
@@ -120,17 +120,17 @@ CMakeFiles/Server.dir/Server/VisionControl.cpp.o.provides.build: CMakeFiles/Serv
 
 CMakeFiles/Server.dir/Server/Vision_Gait.cpp.o: CMakeFiles/Server.dir/flags.make
 CMakeFiles/Server.dir/Server/Vision_Gait.cpp.o: Server/Vision_Gait.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/chaixun/HexIII_Version2/Test_Vision_805/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/hex/git_cx/Test_Vision_805/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Server.dir/Server/Vision_Gait.cpp.o"
-	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Server.dir/Server/Vision_Gait.cpp.o -c /home/chaixun/HexIII_Version2/Test_Vision_805/Server/Vision_Gait.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Server.dir/Server/Vision_Gait.cpp.o -c /home/hex/git_cx/Test_Vision_805/Server/Vision_Gait.cpp
 
 CMakeFiles/Server.dir/Server/Vision_Gait.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/Server/Vision_Gait.cpp.i"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/chaixun/HexIII_Version2/Test_Vision_805/Server/Vision_Gait.cpp > CMakeFiles/Server.dir/Server/Vision_Gait.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hex/git_cx/Test_Vision_805/Server/Vision_Gait.cpp > CMakeFiles/Server.dir/Server/Vision_Gait.cpp.i
 
 CMakeFiles/Server.dir/Server/Vision_Gait.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/Server/Vision_Gait.cpp.s"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/chaixun/HexIII_Version2/Test_Vision_805/Server/Vision_Gait.cpp -o CMakeFiles/Server.dir/Server/Vision_Gait.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hex/git_cx/Test_Vision_805/Server/Vision_Gait.cpp -o CMakeFiles/Server.dir/Server/Vision_Gait.cpp.s
 
 CMakeFiles/Server.dir/Server/Vision_Gait.cpp.o.requires:
 .PHONY : CMakeFiles/Server.dir/Server/Vision_Gait.cpp.o.requires
@@ -278,6 +278,6 @@ CMakeFiles/Server.dir/clean:
 .PHONY : CMakeFiles/Server.dir/clean
 
 CMakeFiles/Server.dir/depend:
-	cd /home/chaixun/HexIII_Version2/Test_Vision_805 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chaixun/HexIII_Version2/Test_Vision_805 /home/chaixun/HexIII_Version2/Test_Vision_805 /home/chaixun/HexIII_Version2/Test_Vision_805 /home/chaixun/HexIII_Version2/Test_Vision_805 /home/chaixun/HexIII_Version2/Test_Vision_805/CMakeFiles/Server.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/hex/git_cx/Test_Vision_805 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hex/git_cx/Test_Vision_805 /home/hex/git_cx/Test_Vision_805 /home/hex/git_cx/Test_Vision_805 /home/hex/git_cx/Test_Vision_805 /home/hex/git_cx/Test_Vision_805/CMakeFiles/Server.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Server.dir/depend
 

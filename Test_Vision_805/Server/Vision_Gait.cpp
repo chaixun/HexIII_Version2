@@ -632,7 +632,9 @@ int RobotWalkVision(Robots::ROBOT_BASE *pRobot, const Robots::GAIT_PARAM_BASE *p
       0.3, -1.05, 0.65 };
 
     double stepUpH = 0.25;
-    double stepUpD = 0.325;
+    //double stepUpD = 0.325;
+    double stepUpD = pRealParam->walkvisiondistance;
+
 
     double StepUpNextPos[6] = {0, 0, 0, 0, 0, 0};
 

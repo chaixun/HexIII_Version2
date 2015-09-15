@@ -25,6 +25,7 @@ struct VISION_WALK_PARAM :public Robots::GAIT_PARAM_BASE
 {
     robotMove movetype = nomove;
     walkvisionprocess walkvisionprocess1 = notassign;
+    double walkvisiondistance = 0.325;
     int counter = 5000;
     double turndata = 0;
     double movedata[3] = {0, 0, 0};
