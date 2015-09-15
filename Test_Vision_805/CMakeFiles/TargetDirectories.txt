@@ -1,0 +1,2 @@
+/home/hex/git_cx/Test_Vision_805/CMakeFiles/Client.dir
+/home/hex/git_cx/Test_Vision_805/CMakeFiles/Server.dir
