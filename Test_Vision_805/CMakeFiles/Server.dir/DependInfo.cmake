@@ -4,10 +4,10 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/hex/git_cx/Test_Vision_805/Server/Kinect_Test.cpp" "/home/hex/git_cx/Test_Vision_805/CMakeFiles/Server.dir/Server/Kinect_Test.cpp.o"
-  "/home/hex/git_cx/Test_Vision_805/Server/VisionControl.cpp" "/home/hex/git_cx/Test_Vision_805/CMakeFiles/Server.dir/Server/VisionControl.cpp.o"
-  "/home/hex/git_cx/Test_Vision_805/Server/Vision_Gait.cpp" "/home/hex/git_cx/Test_Vision_805/CMakeFiles/Server.dir/Server/Vision_Gait.cpp.o"
-  "/home/hex/git_cx/Test_Vision_805/Server/main.cpp" "/home/hex/git_cx/Test_Vision_805/CMakeFiles/Server.dir/Server/main.cpp.o"
+  "/home/chaixun/HexIII_Version2/Test_Vision_805/Server/Kinect_Test.cpp" "/home/chaixun/HexIII_Version2/Test_Vision_805/CMakeFiles/Server.dir/Server/Kinect_Test.cpp.o"
+  "/home/chaixun/HexIII_Version2/Test_Vision_805/Server/VisionControl.cpp" "/home/chaixun/HexIII_Version2/Test_Vision_805/CMakeFiles/Server.dir/Server/VisionControl.cpp.o"
+  "/home/chaixun/HexIII_Version2/Test_Vision_805/Server/Vision_Gait.cpp" "/home/chaixun/HexIII_Version2/Test_Vision_805/CMakeFiles/Server.dir/Server/Vision_Gait.cpp.o"
+  "/home/chaixun/HexIII_Version2/Test_Vision_805/Server/main.cpp" "/home/chaixun/HexIII_Version2/Test_Vision_805/CMakeFiles/Server.dir/Server/main.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

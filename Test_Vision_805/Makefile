@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hex/git_cx/Test_Vision_805
+CMAKE_SOURCE_DIR = /home/chaixun/HexIII_Version2/Test_Vision_805
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hex/git_cx/Test_Vision_805
+CMAKE_BINARY_DIR = /home/chaixun/HexIII_Version2/Test_Vision_805
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,6 +79,16 @@ install/local: preinstall
 install/local/fast: install/local
 .PHONY : install/local/fast
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+.PHONY : install/strip/fast
+
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -100,9 +110,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hex/git_cx/Test_Vision_805/CMakeFiles /home/hex/git_cx/Test_Vision_805/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/chaixun/HexIII_Version2/Test_Vision_805/CMakeFiles /home/chaixun/HexIII_Version2/Test_Vision_805/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hex/git_cx/Test_Vision_805/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/chaixun/HexIII_Version2/Test_Vision_805/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -142,11 +152,6 @@ Client/fast:
 	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/build
 .PHONY : Client/fast
 
-# Manual pre-install relink rule for target.
-Client/preinstall:
-	$(MAKE) -f CMakeFiles/Client.dir/build.make CMakeFiles/Client.dir/preinstall
-.PHONY : Client/preinstall
-
 #=============================================================================
 # Target rules for targets named Server
 
@@ -159,11 +164,6 @@ Server: cmake_check_build_system
 Server/fast:
 	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/build
 .PHONY : Server/fast
-
-# Manual pre-install relink rule for target.
-Server/preinstall:
-	$(MAKE) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/preinstall
-.PHONY : Server/preinstall
 
 Client/client.o: Client/client.cpp.o
 .PHONY : Client/client.o
@@ -296,6 +296,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... install"
 	@echo "... install/local"
+	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... Client/client.o"

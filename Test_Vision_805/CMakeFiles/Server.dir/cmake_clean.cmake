@@ -5,8 +5,6 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/Server.dir/Server/Vision_Gait.cpp.o"
   "bin/Server.pdb"
   "bin/Server"
-  "bin/Server.pdb"
-  "CMakeFiles/CMakeRelink.dir/Server"
 )
 
 # Per-language clean rules from dependency scanning.

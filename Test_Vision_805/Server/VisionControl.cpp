@@ -1,5 +1,7 @@
 #include "VisionControl.h"
 
+extern bool IsWalkVisionEnd;
+
 int visionAdjust(double *param_Adjust, bool *adjust_Finished)
 {
     if(abs(Kinect::leftedge_z[0] - Kinect::rightedge_z[0]) > 2)
@@ -234,6 +236,72 @@ int visionStepOver(Kinect &kinect_1, double *step_over_data)
             counter++;
             Kinect::IsCaptureEnd = false;
             memcpy(step_over_data,stepover_data,4*sizeof(double));
+            break;
+        }
+    }
+    return 0;
+}
+
+int walkVision(Kinect &kinect_1, double *nextfoot_pos)
+{
+    cout<<"Vision Walk!!!"<<endl;
+
+    static int StepUp_Num = -1;
+
+    static double StepUp_Foot_Height[5][6] =
+    {
+        {-1.05, -1.05, -1.05, -1.05, -1.05, -1.05},
+        {-1.05, -1.05, -1.05, -1.05, -1.05, -1.05},
+        {-1.05, -1.05, -1.05, -1.05, -1.05, -1.05},
+        {-1.05, -1.05, -1.05, -1.05, -1.05, -1.05},
+        {-1.05, -1.05, -1.05, -1.05, -1.05, -1.05},
+    };
+
+    if(IsWalkVisionEnd==true)
+    {
+        StepUp_Num = -1;
+        for(int i = 0; i < 5; i++)
+        {
+            for(int j =0; j < 6; j++)
+            {
+                StepUp_Foot_Height[i][j] = -1.05;
+            }
+        }
+
+        IsWalkVisionEnd = false;
+    }
+
+    kinect_1.capture(&StepUp_Num);
+
+    while(1)
+    {
+        if(Kinect::IsCaptureEnd == true)
+        {
+            for(int m = 0; m < 4; m++)
+            {
+                if(Kinect::CurrentHeight[m] > -0.85 )
+                {
+                    Kinect::CurrentHeight[m] = -0.85;
+                }
+
+                if(Kinect::CurrentHeight[m] < -1.05 )
+                {
+                    Kinect::CurrentHeight[m] = -1.05;
+                }
+            }
+            StepUp_Foot_Height[(4+StepUp_Num)%5][0] = Kinect::CurrentHeight[1];
+            StepUp_Foot_Height[(2+StepUp_Num)%5][1] = Kinect::CurrentHeight[0];
+            StepUp_Foot_Height[(0+StepUp_Num)%5][2] = Kinect::CurrentHeight[1];
+            StepUp_Foot_Height[(4+StepUp_Num)%5][3] = Kinect::CurrentHeight[3];
+            StepUp_Foot_Height[(2+StepUp_Num)%5][4] = Kinect::CurrentHeight[2];
+            StepUp_Foot_Height[(0+StepUp_Num)%5][5] = Kinect::CurrentHeight[3];
+
+            cout<<"FOOT HEIGHT"<<endl<<StepUp_Foot_Height[StepUp_Num%5][0]<<endl<<StepUp_Foot_Height[StepUp_Num%5][1]<<endl<<StepUp_Foot_Height[StepUp_Num%5][2]
+                    <<endl<<StepUp_Foot_Height[StepUp_Num%5][3]<<endl<<StepUp_Foot_Height[StepUp_Num%5][4]<<endl<<StepUp_Foot_Height[StepUp_Num%5][5]<<endl;
+
+            Kinect::IsCaptureEnd = false;
+            memcpy(nextfoot_pos, StepUp_Foot_Height[StepUp_Num%5], sizeof(StepUp_Foot_Height[StepUp_Num%5]));
+
             break;
         }
     }

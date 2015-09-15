@@ -4,7 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/hex/git_cx/Test_Vision_805/Client/client.cpp" "/home/hex/git_cx/Test_Vision_805/CMakeFiles/Client.dir/Client/client.cpp.o"
+  "/home/chaixun/HexIII_Version2/Test_Vision_805/Client/client.cpp" "/home/chaixun/HexIII_Version2/Test_Vision_805/CMakeFiles/Client.dir/Client/client.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

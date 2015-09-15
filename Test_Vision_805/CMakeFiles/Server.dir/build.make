@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hex/git_cx/Test_Vision_805
+CMAKE_SOURCE_DIR = /home/chaixun/HexIII_Version2/Test_Vision_805
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hex/git_cx/Test_Vision_805
+CMAKE_BINARY_DIR = /home/chaixun/HexIII_Version2/Test_Vision_805
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Server.dir/depend.make
@@ -51,17 +51,17 @@ include CMakeFiles/Server.dir/flags.make
 
 CMakeFiles/Server.dir/Server/main.cpp.o: CMakeFiles/Server.dir/flags.make
 CMakeFiles/Server.dir/Server/main.cpp.o: Server/main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hex/git_cx/Test_Vision_805/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/chaixun/HexIII_Version2/Test_Vision_805/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Server.dir/Server/main.cpp.o"
-	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Server.dir/Server/main.cpp.o -c /home/hex/git_cx/Test_Vision_805/Server/main.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Server.dir/Server/main.cpp.o -c /home/chaixun/HexIII_Version2/Test_Vision_805/Server/main.cpp
 
 CMakeFiles/Server.dir/Server/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/Server/main.cpp.i"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hex/git_cx/Test_Vision_805/Server/main.cpp > CMakeFiles/Server.dir/Server/main.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/chaixun/HexIII_Version2/Test_Vision_805/Server/main.cpp > CMakeFiles/Server.dir/Server/main.cpp.i
 
 CMakeFiles/Server.dir/Server/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/Server/main.cpp.s"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hex/git_cx/Test_Vision_805/Server/main.cpp -o CMakeFiles/Server.dir/Server/main.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/chaixun/HexIII_Version2/Test_Vision_805/Server/main.cpp -o CMakeFiles/Server.dir/Server/main.cpp.s
 
 CMakeFiles/Server.dir/Server/main.cpp.o.requires:
 .PHONY : CMakeFiles/Server.dir/Server/main.cpp.o.requires
@@ -74,17 +74,17 @@ CMakeFiles/Server.dir/Server/main.cpp.o.provides.build: CMakeFiles/Server.dir/Se
 
 CMakeFiles/Server.dir/Server/Kinect_Test.cpp.o: CMakeFiles/Server.dir/flags.make
 CMakeFiles/Server.dir/Server/Kinect_Test.cpp.o: Server/Kinect_Test.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hex/git_cx/Test_Vision_805/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/chaixun/HexIII_Version2/Test_Vision_805/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Server.dir/Server/Kinect_Test.cpp.o"
-	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Server.dir/Server/Kinect_Test.cpp.o -c /home/hex/git_cx/Test_Vision_805/Server/Kinect_Test.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Server.dir/Server/Kinect_Test.cpp.o -c /home/chaixun/HexIII_Version2/Test_Vision_805/Server/Kinect_Test.cpp
 
 CMakeFiles/Server.dir/Server/Kinect_Test.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/Server/Kinect_Test.cpp.i"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hex/git_cx/Test_Vision_805/Server/Kinect_Test.cpp > CMakeFiles/Server.dir/Server/Kinect_Test.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/chaixun/HexIII_Version2/Test_Vision_805/Server/Kinect_Test.cpp > CMakeFiles/Server.dir/Server/Kinect_Test.cpp.i
 
 CMakeFiles/Server.dir/Server/Kinect_Test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/Server/Kinect_Test.cpp.s"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hex/git_cx/Test_Vision_805/Server/Kinect_Test.cpp -o CMakeFiles/Server.dir/Server/Kinect_Test.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/chaixun/HexIII_Version2/Test_Vision_805/Server/Kinect_Test.cpp -o CMakeFiles/Server.dir/Server/Kinect_Test.cpp.s
 
 CMakeFiles/Server.dir/Server/Kinect_Test.cpp.o.requires:
 .PHONY : CMakeFiles/Server.dir/Server/Kinect_Test.cpp.o.requires
@@ -97,17 +97,17 @@ CMakeFiles/Server.dir/Server/Kinect_Test.cpp.o.provides.build: CMakeFiles/Server
 
 CMakeFiles/Server.dir/Server/VisionControl.cpp.o: CMakeFiles/Server.dir/flags.make
 CMakeFiles/Server.dir/Server/VisionControl.cpp.o: Server/VisionControl.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hex/git_cx/Test_Vision_805/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/chaixun/HexIII_Version2/Test_Vision_805/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Server.dir/Server/VisionControl.cpp.o"
-	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Server.dir/Server/VisionControl.cpp.o -c /home/hex/git_cx/Test_Vision_805/Server/VisionControl.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Server.dir/Server/VisionControl.cpp.o -c /home/chaixun/HexIII_Version2/Test_Vision_805/Server/VisionControl.cpp
 
 CMakeFiles/Server.dir/Server/VisionControl.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/Server/VisionControl.cpp.i"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hex/git_cx/Test_Vision_805/Server/VisionControl.cpp > CMakeFiles/Server.dir/Server/VisionControl.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/chaixun/HexIII_Version2/Test_Vision_805/Server/VisionControl.cpp > CMakeFiles/Server.dir/Server/VisionControl.cpp.i
 
 CMakeFiles/Server.dir/Server/VisionControl.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/Server/VisionControl.cpp.s"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hex/git_cx/Test_Vision_805/Server/VisionControl.cpp -o CMakeFiles/Server.dir/Server/VisionControl.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/chaixun/HexIII_Version2/Test_Vision_805/Server/VisionControl.cpp -o CMakeFiles/Server.dir/Server/VisionControl.cpp.s
 
 CMakeFiles/Server.dir/Server/VisionControl.cpp.o.requires:
 .PHONY : CMakeFiles/Server.dir/Server/VisionControl.cpp.o.requires
@@ -120,17 +120,17 @@ CMakeFiles/Server.dir/Server/VisionControl.cpp.o.provides.build: CMakeFiles/Serv
 
 CMakeFiles/Server.dir/Server/Vision_Gait.cpp.o: CMakeFiles/Server.dir/flags.make
 CMakeFiles/Server.dir/Server/Vision_Gait.cpp.o: Server/Vision_Gait.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hex/git_cx/Test_Vision_805/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/chaixun/HexIII_Version2/Test_Vision_805/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Server.dir/Server/Vision_Gait.cpp.o"
-	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Server.dir/Server/Vision_Gait.cpp.o -c /home/hex/git_cx/Test_Vision_805/Server/Vision_Gait.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Server.dir/Server/Vision_Gait.cpp.o -c /home/chaixun/HexIII_Version2/Test_Vision_805/Server/Vision_Gait.cpp
 
 CMakeFiles/Server.dir/Server/Vision_Gait.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/Server/Vision_Gait.cpp.i"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hex/git_cx/Test_Vision_805/Server/Vision_Gait.cpp > CMakeFiles/Server.dir/Server/Vision_Gait.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/chaixun/HexIII_Version2/Test_Vision_805/Server/Vision_Gait.cpp > CMakeFiles/Server.dir/Server/Vision_Gait.cpp.i
 
 CMakeFiles/Server.dir/Server/Vision_Gait.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/Server/Vision_Gait.cpp.s"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hex/git_cx/Test_Vision_805/Server/Vision_Gait.cpp -o CMakeFiles/Server.dir/Server/Vision_Gait.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/chaixun/HexIII_Version2/Test_Vision_805/Server/Vision_Gait.cpp -o CMakeFiles/Server.dir/Server/Vision_Gait.cpp.s
 
 CMakeFiles/Server.dir/Server/Vision_Gait.cpp.o.requires:
 .PHONY : CMakeFiles/Server.dir/Server/Vision_Gait.cpp.o.requires
@@ -267,132 +267,6 @@ bin/Server: CMakeFiles/Server.dir/link.txt
 CMakeFiles/Server.dir/build: bin/Server
 .PHONY : CMakeFiles/Server.dir/build
 
-# Object files for target Server
-Server_OBJECTS = \
-"CMakeFiles/Server.dir/Server/main.cpp.o" \
-"CMakeFiles/Server.dir/Server/Kinect_Test.cpp.o" \
-"CMakeFiles/Server.dir/Server/VisionControl.cpp.o" \
-"CMakeFiles/Server.dir/Server/Vision_Gait.cpp.o"
-
-# External object files for target Server
-Server_EXTERNAL_OBJECTS =
-
-CMakeFiles/CMakeRelink.dir/Server: CMakeFiles/Server.dir/Server/main.cpp.o
-CMakeFiles/CMakeRelink.dir/Server: CMakeFiles/Server.dir/Server/Kinect_Test.cpp.o
-CMakeFiles/CMakeRelink.dir/Server: CMakeFiles/Server.dir/Server/VisionControl.cpp.o
-CMakeFiles/CMakeRelink.dir/Server: CMakeFiles/Server.dir/Server/Vision_Gait.cpp.o
-CMakeFiles/CMakeRelink.dir/Server: CMakeFiles/Server.dir/build.make
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/x86_64-linux-gnu/libboost_system.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/x86_64-linux-gnu/libboost_thread.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/x86_64-linux-gnu/libboost_iostreams.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/x86_64-linux-gnu/libboost_serialization.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/x86_64-linux-gnu/libpthread.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libpcl_common.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/x86_64-linux-gnu/libflann_cpp_s.a
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libpcl_kdtree.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libpcl_octree.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libpcl_search.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/x86_64-linux-gnu/libqhull.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libpcl_surface.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libpcl_sample_consensus.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libOpenNI.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libOpenNI2.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libvtkCommon.so.5.8.0
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libvtkFiltering.so.5.8.0
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libvtkImaging.so.5.8.0
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libvtkGraphics.so.5.8.0
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libvtkGenericFiltering.so.5.8.0
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libvtkIO.so.5.8.0
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libvtkRendering.so.5.8.0
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libvtkVolumeRendering.so.5.8.0
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libvtkHybrid.so.5.8.0
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libvtkWidgets.so.5.8.0
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libvtkParallel.so.5.8.0
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libvtkInfovis.so.5.8.0
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libvtkGeovis.so.5.8.0
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libvtkViews.so.5.8.0
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libvtkCharts.so.5.8.0
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libpcl_io.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libpcl_filters.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libpcl_features.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libpcl_keypoints.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libpcl_registration.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libpcl_segmentation.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libpcl_recognition.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libpcl_visualization.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libpcl_people.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libpcl_outofcore.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libpcl_tracking.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libpcl_apps.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/x86_64-linux-gnu/libboost_system.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/x86_64-linux-gnu/libboost_thread.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/x86_64-linux-gnu/libboost_iostreams.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/x86_64-linux-gnu/libboost_serialization.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/x86_64-linux-gnu/libpthread.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/x86_64-linux-gnu/libqhull.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libOpenNI.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libOpenNI2.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/x86_64-linux-gnu/libflann_cpp_s.a
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libvtkCommon.so.5.8.0
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libvtkFiltering.so.5.8.0
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libvtkImaging.so.5.8.0
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libvtkGraphics.so.5.8.0
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libvtkGenericFiltering.so.5.8.0
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libvtkIO.so.5.8.0
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libvtkRendering.so.5.8.0
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libvtkVolumeRendering.so.5.8.0
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libvtkHybrid.so.5.8.0
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libvtkWidgets.so.5.8.0
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libvtkParallel.so.5.8.0
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libvtkInfovis.so.5.8.0
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libvtkGeovis.so.5.8.0
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libvtkViews.so.5.8.0
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libvtkCharts.so.5.8.0
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libpcl_common.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libpcl_kdtree.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libpcl_octree.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libpcl_search.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libpcl_surface.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libpcl_sample_consensus.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libpcl_io.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libpcl_filters.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libpcl_features.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libpcl_keypoints.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libpcl_registration.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libpcl_segmentation.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libpcl_recognition.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libpcl_visualization.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libpcl_people.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libpcl_outofcore.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libpcl_tracking.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libpcl_apps.so
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libvtkViews.so.5.8.0
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libvtkInfovis.so.5.8.0
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libvtkWidgets.so.5.8.0
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libvtkVolumeRendering.so.5.8.0
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libvtkHybrid.so.5.8.0
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libvtkParallel.so.5.8.0
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libvtkRendering.so.5.8.0
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libvtkImaging.so.5.8.0
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libvtkGraphics.so.5.8.0
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libvtkIO.so.5.8.0
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libvtkFiltering.so.5.8.0
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libvtkCommon.so.5.8.0
-CMakeFiles/CMakeRelink.dir/Server: /usr/lib/libvtksys.so.5.8.0
-CMakeFiles/CMakeRelink.dir/Server: CMakeFiles/Server.dir/relink.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable CMakeFiles/CMakeRelink.dir/Server"
-	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Server.dir/relink.txt --verbose=$(VERBOSE)
-
-# Rule to relink during preinstall.
-CMakeFiles/Server.dir/preinstall: CMakeFiles/CMakeRelink.dir/Server
-.PHONY : CMakeFiles/Server.dir/preinstall
-
 CMakeFiles/Server.dir/requires: CMakeFiles/Server.dir/Server/main.cpp.o.requires
 CMakeFiles/Server.dir/requires: CMakeFiles/Server.dir/Server/Kinect_Test.cpp.o.requires
 CMakeFiles/Server.dir/requires: CMakeFiles/Server.dir/Server/VisionControl.cpp.o.requires
@@ -404,6 +278,6 @@ CMakeFiles/Server.dir/clean:
 .PHONY : CMakeFiles/Server.dir/clean
 
 CMakeFiles/Server.dir/depend:
-	cd /home/hex/git_cx/Test_Vision_805 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hex/git_cx/Test_Vision_805 /home/hex/git_cx/Test_Vision_805 /home/hex/git_cx/Test_Vision_805 /home/hex/git_cx/Test_Vision_805 /home/hex/git_cx/Test_Vision_805/CMakeFiles/Server.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/chaixun/HexIII_Version2/Test_Vision_805 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chaixun/HexIII_Version2/Test_Vision_805 /home/chaixun/HexIII_Version2/Test_Vision_805 /home/chaixun/HexIII_Version2/Test_Vision_805 /home/chaixun/HexIII_Version2/Test_Vision_805 /home/chaixun/HexIII_Version2/Test_Vision_805/CMakeFiles/Server.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Server.dir/depend
 

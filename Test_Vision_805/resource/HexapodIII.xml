@@ -1545,6 +1545,30 @@
             </wk>
            <vwk/>
            <steptest/>
+           <body>
+                <body_param type="group">
+                    <XDirection abbreviation="x" type="double" default="0"/>
+                    <YDirection abbreviation="y" type="double" default="0"/>
+                    <ZDirection abbreviation="z" type="double" default="0"/>
+                </body_param>
+           </body>
+           <turn>
+               <turn_param type="group">
+                   <TurnAngle abbreviation="t" type="double" default="0"/>
+               </turn_param>
+           </turn>
+           <move>
+               <move_param type="group">
+                   <XDirection abbreviation="x" type="double" default="0"/>
+                   <YDirection abbreviation="y" type="double" default="0"/>
+                   <ZDirection abbreviation="z" type="double" default="0"/>
+               </move_param>
+           </move>
+           <wkv default="continuous">
+               <continuous abbreviation="c"/>
+               <start abbreviation="s"/>
+               <end abbreviation="e"/>
+           <wkv/>
         </Commands>
         <Connection IP="127.0.0.1" Port="5866"/>
         <Control>
@@ -1563,5 +1587,5 @@
               }
             </HomeEE>
         </Control>
-    </Server>  
+    </Server>
 </HexapodIII>

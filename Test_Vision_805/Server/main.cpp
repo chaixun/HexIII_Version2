@@ -170,8 +170,9 @@ enum Terrain
 };
 
 Terrain terrain1 = terrainnotknown;
+bool IsWalkVisionEnd = false;
 
-Aris::Core::MSG parseVisionWalk(const std::string &cmd, const map<std::string, std::string> &map)
+Aris::Core::MSG parseVisionWalk(const std::string &cmd, const map<std::string, std::string> &params)
 {
     VISION_WALK_PARAM vswalkparam;
 
@@ -382,7 +383,7 @@ int VisionWalk(Robots::ROBOT_BASE *pRobot, const Robots::GAIT_PARAM_BASE * pPara
     }
 }
 
-Aris::Core::MSG parseStepWalk(const std::string &cmd, const map<std::string, std::string> &map)
+Aris::Core::MSG parseStepWalk(const std::string &cmd, const map<std::string, std::string> &params)
 {
     VISION_WALK_PARAM vswalkparam;
 
@@ -412,6 +413,174 @@ int StepWalk(Robots::ROBOT_BASE *pRobot, const Robots::GAIT_PARAM_BASE * pParam)
     return RobotMove(pRobot, planParam);
 }
 
+Aris::Core::MSG parseMoveBody(const std::string &cmd, const map<std::string, std::string> &params)
+{
+    VISION_WALK_PARAM vswalkparam;
+
+    vswalkparam.counter = 2500;
+
+    for(auto &i:params)
+    {
+        if(i.first == "XDirection")
+        {
+            vswalkparam.bodymovedata[0] = stoi(i.second);
+        }
+        else if(i.first == "YDirection")
+        {
+            vswalkparam.bodymovedata[1] = stoi(i.second);
+        }
+        else if(i.first == "ZDirection")
+        {
+            vswalkparam.bodymovedata[2] = stoi(i.second);
+        }
+    }
+
+    Aris::Core::MSG msg;
+
+    msg.CopyStruct(vswalkparam);
+
+    std::cout<<"finished parse"<<std::endl;
+
+    return msg;
+}
+
+int MoveBody(Robots::ROBOT_BASE *pRobot, const Robots::GAIT_PARAM_BASE * pParam)
+{
+    auto planParam = static_cast<const VISION_WALK_PARAM *>(pParam);
+    return RobotBody(pRobot, planParam);
+}
+
+Aris::Core::MSG parseMoveRobot(const std::string &cmd, const map<std::string, std::string> &params)
+{
+    VISION_WALK_PARAM vswalkparam;
+
+    vswalkparam.counter = 5000;
+
+    for(auto &i:params)
+    {
+        if(i.first == "XDirection")
+        {
+            vswalkparam.movedata[0] = stoi(i.second);
+        }
+        else if(i.first == "YDirection")
+        {
+            vswalkparam.movedata[1] = stoi(i.second);
+        }
+        else if(i.first == "ZDirection")
+        {
+            vswalkparam.movedata[2] = stoi(i.second);
+        }
+    }
+
+    Aris::Core::MSG msg;
+
+    msg.CopyStruct(vswalkparam);
+
+    std::cout<<"finished parse"<<std::endl;
+
+    return msg;
+}
+
+int MoveRobot(Robots::ROBOT_BASE *pRobot, const Robots::GAIT_PARAM_BASE * pParam)
+{
+    auto planParam = static_cast<const VISION_WALK_PARAM *>(pParam);
+    return RobotMove(pRobot, planParam);
+}
+
+Aris::Core::MSG parseTurnRobot(const std::string &cmd, const map<std::string, std::string> &params)
+{
+    VISION_WALK_PARAM vswalkparam;
+
+    vswalkparam.counter = 6001;
+
+    for(auto &i:params)
+    {
+        if(i.first == "TurnAngle")
+        {
+            vswalkparam.turndata = stoi(i.second);
+        }
+    }
+
+    Aris::Core::MSG msg;
+
+    msg.CopyStruct(vswalkparam);
+
+    std::cout<<"finished parse"<<std::endl;
+
+    return msg;
+}
+
+int TurnRobot(Robots::ROBOT_BASE *pRobot, const Robots::GAIT_PARAM_BASE * pParam)
+{
+    auto planParam = static_cast<const VISION_WALK_PARAM *>(pParam);
+    return RobotTurn(pRobot, planParam);
+}
+
+Aris::Core::MSG parseWalkVision(const std::string &cmd, const map<std::string, std::string> &params)
+{
+    VISION_WALK_PARAM vswalkparam;
+
+    for(auto &i:params)
+    {
+        if(i.first == "start")
+        {
+            vswalkparam.walkvisionprocess1 = walkvisionstart;
+            double movebody[3] = {0, 0.2, 0};
+            memcpy(vswalkparam.bodymovedata, movebody,3*sizeof(double));
+            vswalkparam.counter = 2500;
+        }
+        else if(i.first == "continuous")
+        {
+            vswalkparam.walkvisionprocess1 = walkvisioncontinuous;
+            double nextfootpos[6] = {0, 0, 0, 0, 0, 0};
+            walkVision(kinect1, nextfootpos);
+            vswalkparam.counter = 18000;
+            memcpy(vswalkparam.stepupdata, nextfootpos,sizeof(nextfootpos));
+        }
+        else if(i.first == "end")
+        {
+            vswalkparam.walkvisionprocess1 = walkvisionend;
+            double nextfootpos[6] = {-0.85, -0.85, -0.85, -0.85, -0.85, -0.85};
+            vswalkparam.counter = 18000;
+            memcpy(vswalkparam.stepupdata, nextfootpos,sizeof(nextfootpos));
+            IsWalkVisionEnd = true;
+        }
+    }
+
+    Aris::Core::MSG msg;
+
+    msg.CopyStruct(vswalkparam);
+
+    std::cout<<"finished parse"<<std::endl;
+
+    return msg;
+}
+
+int WalkVision(Robots::ROBOT_BASE *pRobot, const Robots::GAIT_PARAM_BASE * pParam)
+{
+    auto planParam = static_cast<const VISION_WALK_PARAM *>(pParam);
+
+    switch (planParam->walkvisionprocess1)
+    {
+    case walkvisionstart:
+    {
+        return RobotBody(pRobot, planParam);
+    }
+        break;
+    case walkvisioncontinuous:
+    {
+        return RobotWalkVision(pRobot, planParam);
+    }
+        break;
+    case walkvisionend:
+    {
+        return RobotWalkVision(pRobot, planParam);
+    }
+        break;
+    }
+}
+
+
 
 int main()
 {
@@ -431,7 +600,11 @@ int main()
     rs->LoadXml("/home/hex/git_cx/Test_Vision/resource/HexapodIII.xml");
     rs->AddGait("wk",Robots::walk,parseWalk);
     rs->AddGait("ad",Robots::adjust,parseAdjust);
-    rs->AddGait("vwk",VisionWalk,parseVisionWalk);
+    rs->AddGait("vwk", VisionWalk, parseVisionWalk);
+    rs->AddGait("body", MoveBody, parseMoveBody);
+    rs->AddGait("turn", TurnRobot, parseTurnRobot);
+    rs->AddGait("move", MoveRobot, parseMoveRobot);
+    rs->AddGait("wkv", WalkVision, parseWalkVision);
     rs->AddGait("steptest", StepWalk, parseStepWalk);
     rs->Start();
     /**/

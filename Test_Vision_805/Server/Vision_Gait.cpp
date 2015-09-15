@@ -2,6 +2,8 @@
 #include <math.h>
 #include <iostream>
 
+extern
+
 #define pi 3.14159265358979323846
 
 #ifndef PI
@@ -448,7 +450,6 @@ int RobotStepUp(Robots::ROBOT_BASE *pRobot, const Robots::GAIT_PARAM_BASE *pPara
     pRobot->SetPee(pEE, pBodyPE);
 
     return pRealParam->counter - pRealParam->count - 1;
-
 }
 
 int RobotStepDown(Robots::ROBOT_BASE *pRobot, const Robots::GAIT_PARAM_BASE *pParam)
@@ -609,6 +610,160 @@ int RobotStepDown(Robots::ROBOT_BASE *pRobot, const Robots::GAIT_PARAM_BASE *pPa
     if (pRealParam->counter - pRealParam->count - 1 == 0)
     {
         memcpy(StepDownCurrentPos, StepDownNextPos, 6*sizeof(double));
+    }
+
+    pRobot->SetPee(pEE, pBodyPE);
+
+    return pRealParam->counter - pRealParam->count - 1;
+}
+
+int RobotWalkVision(Robots::ROBOT_BASE *pRobot, const Robots::GAIT_PARAM_BASE *pParam)
+{
+    auto pRealParam = static_cast<const VISION_WALK_PARAM *>(pParam);
+
+    double pBodyPE[6] = {0, 0, 0, 0, 0, 0};
+
+    double pEE[18] =
+    { -0.3, -1.05, -0.65,
+      -0.45, -1.05, 0,
+      -0.3, -1.05, 0.65,
+      0.3, -1.05, -0.65,
+      0.45, -1.05, 0,
+      0.3, -1.05, 0.65 };
+
+    double stepUpH = 0.25;
+    double stepUpD = 0.325;
+
+    double StepUpNextPos[6] = {0, 0, 0, 0, 0, 0};
+
+    memcpy(StepUpNextPos,pRealParam->stepupdata,6*sizeof(double));
+
+    static double StepUpCurrentPos[6] = {-1.05, -1.05, -1.05, -1.05, -1.05, -1.05};
+
+    for(int i = 0; i < 6; i++)
+    {
+        pEE[i*3 + 1] = StepUpCurrentPos[i];
+    }
+
+    int periodcounter = pRealParam->counter / 6;
+
+    if(pRealParam->count < periodcounter)
+    {
+        double s = -(PI / 2)*cos(PI * (pRealParam->count + 1) / periodcounter) + PI / 2;
+
+        pEE[1] += (stepUpH - (StepUpCurrentPos[0] + 1.05)) * (1 - cos(s))/2;
+        pEE[7] += (stepUpH - (StepUpCurrentPos[2] + 1.05)) * (1 - cos(s))/2;
+        pEE[13] += (stepUpH - (StepUpCurrentPos[4] + 1.05)) * (1 - cos(s))/2;
+    }
+    else if(pRealParam->count >= periodcounter && pRealParam->count < 2 * periodcounter)
+    {
+        double s = -(PI / 2)*cos(PI * (pRealParam->count + 1 - periodcounter) / periodcounter) + PI / 2;
+
+        pEE[1] += (stepUpH - (StepUpCurrentPos[0] + 1.05));
+        pEE[7] += (stepUpH - (StepUpCurrentPos[2] + 1.05));
+        pEE[13] += (stepUpH - (StepUpCurrentPos[4] + 1.05));
+
+        pEE[2] += stepUpD * (1 - cos(s))/2;
+        pEE[8] += stepUpD * (1 - cos(s))/2;
+        pEE[14] += stepUpD * (1 - cos(s))/2;
+
+        pBodyPE[2] += stepUpD/2 * (1 - cos(s))/2;
+    }
+    else if(pRealParam->count >= 2 * periodcounter && pRealParam->count < 3 * periodcounter)
+    {
+        double s = -(PI / 2)*cos(PI * (pRealParam->count + 1 - 2*periodcounter) / periodcounter) + PI / 2;
+
+        pEE[1] += (stepUpH - (StepUpCurrentPos[0] + 1.05))
+                - (stepUpH - (StepUpNextPos[0] + 1.05)) * (1 - cos(s)) / 2;
+        pEE[7] += (stepUpH - (StepUpCurrentPos[2] + 1.05))
+                - (stepUpH - (StepUpNextPos[2] + 1.05)) * (1 - cos(s)) / 2;
+        pEE[13] += (stepUpH - (StepUpCurrentPos[4] + 1.05))
+                - (stepUpH - (StepUpNextPos[4] + 1.05)) * (1 - cos(s)) / 2;
+
+        pEE[2] += stepUpD;
+        pEE[8] += stepUpD;
+        pEE[14] += stepUpD;
+
+        pBodyPE[2] += stepUpD/2;
+    }
+    else if(pRealParam->count >= 3 * periodcounter && pRealParam->count < 4 * periodcounter)
+    {
+        double s = -(PI / 2)*cos(PI * (pRealParam->count + 1 - 3*periodcounter) / periodcounter) + PI / 2;
+
+        pEE[4] += (stepUpH - (StepUpCurrentPos[1] + 1.05)) * (1 - cos(s))/2;
+        pEE[10] += (stepUpH - (StepUpCurrentPos[3] + 1.05)) * (1 - cos(s))/2;
+        pEE[16] += (stepUpH - (StepUpCurrentPos[5] + 1.05)) * (1 - cos(s))/2;
+
+        pEE[1] += (stepUpH - (StepUpCurrentPos[0] + 1.05))
+                - (stepUpH - (StepUpNextPos[0] + 1.05));
+        pEE[7] += (stepUpH - (StepUpCurrentPos[2] + 1.05))
+                - (stepUpH - (StepUpNextPos[2] + 1.05));
+        pEE[13] += (stepUpH - (StepUpCurrentPos[4] + 1.05))
+                - (stepUpH - (StepUpNextPos[4] + 1.05));
+
+        pEE[2] += stepUpD;
+        pEE[8] += stepUpD;
+        pEE[14] += stepUpD;
+
+        pBodyPE[2] += stepUpD/2;
+    }
+    else if(pRealParam->count >= 4 * periodcounter && pRealParam->count < 5 * periodcounter)
+    {
+        double s = -(PI / 2)*cos(PI * (pRealParam->count + 1 - 4*periodcounter) / periodcounter) + PI / 2;
+
+        pEE[4] += (stepUpH - (StepUpCurrentPos[1] + 1.05));
+        pEE[10] += (stepUpH - (StepUpCurrentPos[3] + 1.05));
+        pEE[16] += (stepUpH - (StepUpCurrentPos[5] + 1.05));
+
+        pEE[5] += stepUpD * (1 -cos(s))/2;
+        pEE[11] += stepUpD * (1 -cos(s))/2;
+        pEE[17] += stepUpD * (1 -cos(s))/2;
+
+        pEE[1] += (stepUpH - (StepUpCurrentPos[0] + 1.05))
+                - (stepUpH - (StepUpNextPos[0] + 1.05));
+        pEE[7] += (stepUpH - (StepUpCurrentPos[2] + 1.05))
+                - (stepUpH - (StepUpNextPos[2] + 1.05));
+        pEE[13] += (stepUpH - (StepUpCurrentPos[4] + 1.05))
+                - (stepUpH - (StepUpNextPos[4] + 1.05));
+
+        pEE[2] += stepUpD;
+        pEE[8] += stepUpD;
+        pEE[14] += stepUpD;
+
+        pBodyPE[2] += stepUpD/2 + stepUpD/2 * (1 - cos(s))/2;
+    }
+    else
+    {
+        double s = -(PI / 2)*cos(PI * (pRealParam->count + 1 - 5*periodcounter) / periodcounter) + PI / 2;
+
+        pEE[4] += (stepUpH - (StepUpCurrentPos[1] + 1.05))
+                - (stepUpH - (StepUpNextPos[1] + 1.05)) * (1 - cos(s))/2;
+        pEE[10] += (stepUpH - (StepUpCurrentPos[3] + 1.05))
+                - (stepUpH - (StepUpNextPos[3] + 1.05)) * (1 - cos(s))/ 2;
+        pEE[16] += (stepUpH - (StepUpCurrentPos[5] + 1.05))
+                - (stepUpH - (StepUpNextPos[5] + 1.05)) * (1 - cos(s))/2;
+
+        pEE[5] += stepUpD;
+        pEE[11] += stepUpD;
+        pEE[17] += stepUpD;
+
+        pEE[1] += (stepUpH - (StepUpCurrentPos[0] + 1.05))
+                - (stepUpH - (StepUpNextPos[0] + 1.05));
+        pEE[7] += (stepUpH - (StepUpCurrentPos[2] + 1.05))
+                - (stepUpH - (StepUpNextPos[2] + 1.05));
+        pEE[13] += (stepUpH - (StepUpCurrentPos[4] + 1.05))
+                - (stepUpH - (StepUpNextPos[4] + 1.05));
+
+        pEE[2] += stepUpD;
+        pEE[8] += stepUpD;
+        pEE[14] += stepUpD;
+
+        pBodyPE[2] += stepUpD/2 + stepUpD/2;
+    }
+
+    if (pRealParam->counter - pRealParam->count - 1 == 0)
+    {
+        memcpy(StepUpCurrentPos, StepUpNextPos, 6*sizeof(double));
     }
 
     pRobot->SetPee(pEE, pBodyPE);

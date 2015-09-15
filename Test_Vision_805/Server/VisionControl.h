@@ -6,5 +6,6 @@ int visionAdjust(double *, bool *);
 int visionStepUp(Kinect &, double *);
 int visionStepDown(Kinect &, double *);
 int visionStepOver(Kinect &, double *);
+int walkVision(Kinect &, double *);
 
 #endif // VISIONCONTROL_H

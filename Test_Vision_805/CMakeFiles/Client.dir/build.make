@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hex/git_cx/Test_Vision_805
+CMAKE_SOURCE_DIR = /home/chaixun/HexIII_Version2/Test_Vision_805
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hex/git_cx/Test_Vision_805
+CMAKE_BINARY_DIR = /home/chaixun/HexIII_Version2/Test_Vision_805
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Client.dir/depend.make
@@ -51,17 +51,17 @@ include CMakeFiles/Client.dir/flags.make
 
 CMakeFiles/Client.dir/Client/client.cpp.o: CMakeFiles/Client.dir/flags.make
 CMakeFiles/Client.dir/Client/client.cpp.o: Client/client.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/hex/git_cx/Test_Vision_805/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/chaixun/HexIII_Version2/Test_Vision_805/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Client.dir/Client/client.cpp.o"
-	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Client.dir/Client/client.cpp.o -c /home/hex/git_cx/Test_Vision_805/Client/client.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Client.dir/Client/client.cpp.o -c /home/chaixun/HexIII_Version2/Test_Vision_805/Client/client.cpp
 
 CMakeFiles/Client.dir/Client/client.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Client.dir/Client/client.cpp.i"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/hex/git_cx/Test_Vision_805/Client/client.cpp > CMakeFiles/Client.dir/Client/client.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/chaixun/HexIII_Version2/Test_Vision_805/Client/client.cpp > CMakeFiles/Client.dir/Client/client.cpp.i
 
 CMakeFiles/Client.dir/Client/client.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Client.dir/Client/client.cpp.s"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/hex/git_cx/Test_Vision_805/Client/client.cpp -o CMakeFiles/Client.dir/Client/client.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/chaixun/HexIII_Version2/Test_Vision_805/Client/client.cpp -o CMakeFiles/Client.dir/Client/client.cpp.s
 
 CMakeFiles/Client.dir/Client/client.cpp.o.requires:
 .PHONY : CMakeFiles/Client.dir/Client/client.cpp.o.requires
@@ -89,23 +89,6 @@ bin/Client: CMakeFiles/Client.dir/link.txt
 CMakeFiles/Client.dir/build: bin/Client
 .PHONY : CMakeFiles/Client.dir/build
 
-# Object files for target Client
-Client_OBJECTS = \
-"CMakeFiles/Client.dir/Client/client.cpp.o"
-
-# External object files for target Client
-Client_EXTERNAL_OBJECTS =
-
-CMakeFiles/CMakeRelink.dir/Client: CMakeFiles/Client.dir/Client/client.cpp.o
-CMakeFiles/CMakeRelink.dir/Client: CMakeFiles/Client.dir/build.make
-CMakeFiles/CMakeRelink.dir/Client: CMakeFiles/Client.dir/relink.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable CMakeFiles/CMakeRelink.dir/Client"
-	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Client.dir/relink.txt --verbose=$(VERBOSE)
-
-# Rule to relink during preinstall.
-CMakeFiles/Client.dir/preinstall: CMakeFiles/CMakeRelink.dir/Client
-.PHONY : CMakeFiles/Client.dir/preinstall
-
 CMakeFiles/Client.dir/requires: CMakeFiles/Client.dir/Client/client.cpp.o.requires
 .PHONY : CMakeFiles/Client.dir/requires
 
@@ -114,6 +97,6 @@ CMakeFiles/Client.dir/clean:
 .PHONY : CMakeFiles/Client.dir/clean
 
 CMakeFiles/Client.dir/depend:
-	cd /home/hex/git_cx/Test_Vision_805 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/hex/git_cx/Test_Vision_805 /home/hex/git_cx/Test_Vision_805 /home/hex/git_cx/Test_Vision_805 /home/hex/git_cx/Test_Vision_805 /home/hex/git_cx/Test_Vision_805/CMakeFiles/Client.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/chaixun/HexIII_Version2/Test_Vision_805 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/chaixun/HexIII_Version2/Test_Vision_805 /home/chaixun/HexIII_Version2/Test_Vision_805 /home/chaixun/HexIII_Version2/Test_Vision_805 /home/chaixun/HexIII_Version2/Test_Vision_805 /home/chaixun/HexIII_Version2/Test_Vision_805/CMakeFiles/Client.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Client.dir/depend
 
